@@ -1,13 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { useState, useEffect } from "react";
+
+
 
 function App() {
+
+
+  const [num, setNum] = useState(0);
+ useEffect( () => {
+   fetch("https://duodigitobackend.herokuapp.com/duodigito=42449")
+  .then(promise => promise.json())
+  .then(data => setNum(data["duodigito"]));
+  
+ }
+
+  ,[])
+    
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {num}
         </p>
         <a
           className="App-link"
