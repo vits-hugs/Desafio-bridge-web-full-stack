@@ -5,13 +5,14 @@ import History from './History';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
-
- const {data:algo} = useCalculo(234)
- const {data:algo1} = useCalculo(242)
- const {data:algo2} = useCalculo(810)
-
- const arr = [algo,algo1,algo2]
- const historico = {'duodigito':810,'multiplicador':5}
+  var previous;
+  const[historico,setHistorico]=useState([]);
+  
+  const addHistorico = (data) => {
+    
+    //let namesSet = new Set(previous.map(item => item.duodigito));
+    setHistorico(previous=>[...previous,data]);
+  }
 
   return (
     <Router>
@@ -21,10 +22,10 @@ function App() {
 
         <Switch>
             <Route exact path="/">
-              <Calculator/>
+              <Calculator addHistorico ={addHistorico}/>
             </Route>
             <Route exact path="/history">
-                {algo && <History history={arr}/>}
+                {<History historico={historico}/>}
             </Route>
           </Switch>
       

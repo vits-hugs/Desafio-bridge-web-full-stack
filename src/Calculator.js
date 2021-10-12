@@ -1,14 +1,17 @@
 import {Link} from 'react-router-dom';
 import { useState } from "react";
 import useCalculo from "./Calcula";
+const salva=[];
 const Calculator = props =>
 {
     const [number,setNumber] = useState(0)
     const [data,setData] = useState(null);
     const [isPending,setIsPending] = useState(true);
     const [error,setError] = useState(null);
-    var salva ;
+    
+    
     const handleSubmit = (e) => {
+        setIsPending(true);
         e.preventDefault();
         const abortCont = new AbortController();
         fetch('https://duodigitobackend.herokuapp.com/duodigito='+number,{signal: abortCont.signal}).then(res => {
@@ -18,8 +21,7 @@ const Calculator = props =>
             setData(data);
             setIsPending(false);
             setError(null);
-            salva = data
-            console.log(salva['duodigito'])
+            props.addHistorico(data);
     
         })
         .catch((error) => {
@@ -44,10 +46,14 @@ const Calculator = props =>
             
             <button type="submit" >Calcula </button>
             </form>
-
+        
+            {isPending && <h1>Calculando...</h1>}
             {!isPending && <h1>{data.duodigito}</h1>}
 
-            <Link to="/history" >Historico</Link>
+            <Link to={{
+                        pathname: "/history",
+                        state: data// your data array of objects
+            }} >Historico</Link>
         </div>
     );
 }
