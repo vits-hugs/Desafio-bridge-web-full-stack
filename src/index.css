@@ -2,18 +2,19 @@
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color:#fff
+
 } 
 
 .calculator {
-  max-width: 600px;
+  max-width: 650px;
   margin: 50px auto;
   text-align: center;
+  color:rgb(255,255,255);
 }
 
 .calculator Link {
   background: #FFBF00;
-  color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
@@ -35,7 +36,7 @@
 }
 
 .calculator button {
-  background: #FFBF00;
+  background: #ffbf00;
   color: #fff;
   border: 100%;
   padding: 8px;
@@ -45,7 +46,8 @@
 
 .calculator input {
   width:100px;
-  font-size: larger;
+  color: rgb(0, 0, 0);
+  font-size:20px;
   height: 50px;
   padding: 6px  10px;
   margin: 10px 0;
@@ -69,5 +71,36 @@
   padding: 20px;
   border-radius: 32px;
   cursor: pointer;
+
+}
+
+.link-github{
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  bottom: 0 ;
+  background: #24292f;
+  color: #fff;
+  padding: 10px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.history-preview{
+  max-width: 650px;
+  margin: 50px auto;
+  text-align: center;
+ 
+
+}
+.history-preview h2{
+  color:rgb(0, 0, 0);
+  max-width: 650px;
+  margin:  auto;
+  text-align: left;
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
 
 }

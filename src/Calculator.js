@@ -48,14 +48,18 @@ const Calculator = props =>
             </form>
             <div className="resultados">
             {isPending && <h1>Calculando...</h1>}
-            {!isPending && <h1>O menor duodigito é:</h1>}
-            {!isPending && <h1>{data.multiplicador}X{shownum}={data.duodigito}</h1>}
+            {!isPending && <h1>O menor multiplo desse numero duodigito é:</h1>}
+            {!isPending && <h1>{data.multiplicador} X {shownum} = {data.duodigito}</h1>}
             </div>
             <Link to={{
                         pathname: "/history",
                         state: data// your data array of objects
             }} className="botao-historico">Historico</Link>
+            <div className="link-github">
+                <a href="https://github.com/vits-hugs/Desafio-bridge-web-full-stack">Código fonte</a>
+            </div>
         </div>
+            
     );
 }
 

@@ -11,8 +11,10 @@ function App() {
     setHistorico(historico.filter((v,i,a)=>a.findIndex(t=>(t.duodigito === v.duodigito))===i))
     setHistorico(previous=>[...previous,data]);
     console.log(historico);
-    
-    
+
+  }
+  const handleDelete= (valor) => {
+    setHistorico(historico.filter((v,i,a)=>(v.duodigito !== valor)))
 
   }
 
@@ -27,7 +29,7 @@ function App() {
               <Calculator addHistorico ={addHistorico}/>
             </Route>
             <Route exact path="/history">
-                {<History historico={historico}/>}
+                {<History historico={historico} handleDelete={handleDelete}/>}
             </Route>
           </Switch>
       
