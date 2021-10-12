@@ -4,8 +4,6 @@ import History from './History';
 
 
 function App() {
-
-
   const [num, setNum] = useState(0);
  useEffect( () => {
    fetch("https://duodigitobackend.herokuapp.com/duodigito=42449")
