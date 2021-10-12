@@ -2,7 +2,7 @@ const History = (props) =>
 {   
  
     const handleDelete = props.handleDelete;
-    const history = props.historico 
+    const history = props.historico.filter((v,i,a)=>a.findIndex(t=>(t.duodigito === v.duodigito))===i) ;
     
 
    return history.map((coisa)=> (

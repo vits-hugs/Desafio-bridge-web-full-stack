@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import useCalculo from "./Calcula";
+import { useState} from "react";
 import Calculator from './Calculator';
 import History from './History';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -11,6 +10,7 @@ function App() {
     
     setHistorico(historico.filter((v,i,a)=>a.findIndex(t=>(t.duodigito === v.duodigito))===i))
     setHistorico(previous=>[...previous,data]);
+    console.log(historico);
     
     
 
