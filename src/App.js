@@ -1,18 +1,13 @@
 import { useState, useEffect } from "react";
+import useCalculo from "./Calcula";
 import Calculator from './Calculator';
 import History from './History';
 
 
 function App() {
-  const [num, setNum] = useState(0);
- useEffect( () => {
-   fetch("https://duodigitobackend.herokuapp.com/duodigito=42449")
-  .then(promise => promise.json())
-  .then(data => setNum(data["duodigito"]));
-  
- },[])
- const historico = {'numero':810,'multiplicador':5}
-    
+
+ const {data:algo} = useCalculo(234)
+ const historico = {'duodigito':810,'multiplicador':5}
 
   return (
     <div className="App">
@@ -20,7 +15,7 @@ function App() {
       <div className="content">
         <Calculator/>
 
-        <History history={[historico]}/>
+        {algo && <History history={[algo]}/>}
       </div>
     </div>
   );
