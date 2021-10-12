@@ -2,7 +2,7 @@ const History = (props) =>
 {   
  
     const handleDelete = props.handleDelete;
-    const history = props.historico;
+    const history = props.historico 
     
 
    return history.map((coisa)=> (

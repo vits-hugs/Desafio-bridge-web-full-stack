@@ -5,13 +5,15 @@ import History from './History';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
-  var previous;
   const[historico,setHistorico]=useState([]);
   
   const addHistorico = (data) => {
     
-    //let namesSet = new Set(previous.map(item => item.duodigito));
+    setHistorico(historico.filter((v,i,a)=>a.findIndex(t=>(t.duodigito === v.duodigito))===i))
     setHistorico(previous=>[...previous,data]);
+    
+    
+
   }
 
   return (
