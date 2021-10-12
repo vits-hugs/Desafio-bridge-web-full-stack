@@ -1,11 +1,53 @@
+import {Link} from 'react-router-dom';
+import { useState } from "react";
+import useCalculo from "./Calcula";
 const Calculator = props =>
 {
+    const [number,setNumber] = useState(0)
+    const [data,setData] = useState(null);
+    const [isPending,setIsPending] = useState(true);
+    const [error,setError] = useState(null);
+    var salva ;
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const abortCont = new AbortController();
+        fetch('https://duodigitobackend.herokuapp.com/duodigito='+number,{signal: abortCont.signal}).then(res => {
+            return res.json();
+        })
+        .then(data =>{
+            setData(data);
+            setIsPending(false);
+            setError(null);
+            salva = data
+            console.log(salva['duodigito'])
+    
+        })
+        .catch((error) => {
+            if(error.name === 'AbortError')
+            { console.log('fetch aborted')}
+            else{
+                setIsPending(false)
+                setError(error.message)
+
+            }
+            
+            return () => abortCont.abort();
+    })
+
+}
+
     return (
         <div className="calculator">
             <h1>calcula</h1>
-            <input type="number" />
-            <button type="submit" onClick={console.log('ai')}>Calcula </button>
+            <form onSubmit={handleSubmit}>
+            <input type="number" value={number} onChange={(e)=> setNumber(e.target.value)}/>
+            
+            <button type="submit" >Calcula </button>
+            </form>
 
+            {!isPending && <h1>{data.duodigito}</h1>}
+
+            <Link to="/history" >Historico</Link>
         </div>
     );
 }
