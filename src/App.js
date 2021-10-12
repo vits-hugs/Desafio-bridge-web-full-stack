@@ -1,7 +1,6 @@
-
-import './App.css';
 import { useState, useEffect } from "react";
-
+import Calculator from './Calculator';
+import History from './History';
 
 
 function App() {
@@ -13,26 +12,18 @@ function App() {
   .then(promise => promise.json())
   .then(data => setNum(data["duodigito"]));
   
- }
-
-  ,[])
+ },[])
+ const historico = {'numero':810,'multiplicador':5}
     
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          {num}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className="content">
+        <Calculator/>
+
+        <History history={[historico]}/>
+      </div>
     </div>
   );
 }
