@@ -1,6 +1,7 @@
 import { useState} from "react";
 import Calculator from './Calculator';
 import History from './History';
+import {Link} from 'react-router-dom';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
@@ -29,11 +30,11 @@ function App() {
               <Calculator addHistorico ={addHistorico}/>
             </Route>
             <Route exact path="/history">
+            <Link to={{pathname: "/",}} 
+            className="Calcular-mais">Voltar</Link>
                 {<History historico={historico} handleDelete={handleDelete}/>}
             </Route>
           </Switch>
-      
-
       </div>
     </div>
     </Router>

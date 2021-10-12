@@ -6,9 +6,9 @@ const History = (props) =>
     
 
    return history.map((coisa)=> (
-
     <div className="history-preview" key={history.indexOf(coisa)}>
-        <h2>Duodigito:{coisa.duodigito}</h2>
+        <h2>Menor Duodigito Multiplo de {coisa.num}:</h2>
+        <h2 className="duodigito">{coisa.duodigito}</h2>
         <h2>Tempo de cálculo:{coisa.tempo.toFixed(3)}</h2>
         <button onClick={()=> handleDelete(coisa.duodigito)}>delete history</button>
     </div>

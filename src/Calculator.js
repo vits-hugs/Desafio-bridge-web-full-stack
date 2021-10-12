@@ -17,6 +17,7 @@ const Calculator = props =>
             return res.json();
         })
         .then(data =>{
+            data.num=number;
             setData(data);
             setIsPending(false);
             setError(null);
