@@ -1,3 +1,9 @@
+# Calculadora duodigito
+Calcula o menor número real duodigito múltiplo de X diferente de 0,   
+onde X é um número real informado pelo usuário. Por exemplo, dado X =  999,  
+o menor duodigito múltiplo de X é 999, já que 999x1 é multiplo de 999 e diferente de 0,    
+dado X = 125, 0 menor duodigito multiplo é 500, já que os seus outros multiplos(0,125,250,375)   
+não são duodigitos   
 ## Link do projeto no heroku: https://duodigito-calculator.herokuapp.com/ 
 
 ## Teconologias utilizadas
@@ -37,4 +43,12 @@ http://localhost:3000/
 ## rodar apenas backend
 Para o backend basta rodar o arquivo app.py,  
 que ele será iniciado num localhost.
+
+## numeros legais para botar na calculadora
+1888989
+810
+123
+99985
+123123123123123123123
+
 
