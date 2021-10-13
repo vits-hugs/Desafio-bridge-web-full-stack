@@ -29,7 +29,7 @@ servidor novamente.
 
 
 
-## Como rodar no localmente
+## Como rodar o projeto localmente
 Clone o diretório  
 ```git clone  https://github.com/vits-hugs/Desafio-bridge-web-full-stack.git  ```     
 Abra o terminal no diretório do projeto e rode:  
@@ -40,15 +40,15 @@ e depois rode
 pronto!, o projeto provavelmente estara rodando em  
 http://localhost:3000/
 
-## rodar apenas backend
+## Como rodar apenas backend
 Para o backend basta rodar o arquivo app.py,  
 que ele será iniciado num localhost.
 
-## numeros legais para botar na calculadora
+## Numeros legais para botar na calculadora
 1888989  
 810  
 123  
 99985  
 123123123123123123123  
-
+>ps: alguns podem demorar um pouco para calcular (810 principalmente)
 
