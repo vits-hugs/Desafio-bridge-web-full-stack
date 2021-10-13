@@ -104,7 +104,7 @@
 }
 .Calcular-mais{
   position: absolute;
-  top: 5%;
+  top: 4%;
   left: 10%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -112,8 +112,8 @@
   text-align: center;
   background: #FFBF00;
   border: 0px;
-  padding: 15px;
-  border-radius: 32px;
+  padding: 10px;
+  border-radius: 16px;
   cursor: pointer;
 }
 .duodigito{
