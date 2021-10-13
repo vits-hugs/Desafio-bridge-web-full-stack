@@ -45,10 +45,10 @@ Para o backend basta rodar o arquivo app.py,
 que ele será iniciado num localhost.
 
 ## numeros legais para botar na calculadora
-1888989
-810
-123
-99985
-123123123123123123123
+1888989  
+810  
+123  
+99985  
+123123123123123123123  
 
 
