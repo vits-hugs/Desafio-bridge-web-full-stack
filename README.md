@@ -2,9 +2,11 @@
 
 ## Teconologias utilizadas
 
+
+
 ### Backend (link https://duodigitobackend.herokuapp.com/duodigito=123)
 Para o backend utilizei o microframework web flask,
-fiz essa escolhe pois o backend necessario é bem simples,
+fiz essa escolha pois o backend necessário é bem simples,
 e python é uma linguagem facil e que estou acostumado.
 Então consegui rapidamente fazer o código do backend e 
 hospedar no heroku.
@@ -25,11 +27,11 @@ servidor novamente.
 
 ## Como rodar no localmente
 Clone o diretório
-```git clone  https://github.com/vits-hugs/Desafio-bridge-web-full-stack.git  ```
-Abra o terminal no diretório do projeto e rode:
-```npm  install  ```
-para instalar as dependencias
-e depois rode
-```npm  run start ```
-pronto!, o projeto provavelmente estara rodando em
+```git clone  https://github.com/vits-hugs/Desafio-bridge-web-full-stack.git  ``` \n
+Abra o terminal no diretório do projeto e rode: \n
+```npm  install  ``` \n
+para instalar as dependencias \n
+e depois rode \n
+```npm  run start ``` \n
+pronto!, o projeto provavelmente estara rodando em \n
 http://localhost:3000/
